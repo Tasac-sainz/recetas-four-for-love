@@ -1,12 +1,10 @@
-# **REPOSITORIO DEL EJERCICIO DE EVALUACIÓN DEL MÓDULO 4 (ADALAB)**
+# **REPOSITORIO DE RECETAS DE LA FAMILIA FOUR FOR LOVE**
 
-#### **ENUNCIADO: Desarrollar una API de recetas de cocina que permita insertar nuevas recetas, listar, modificar y eliminar.**
+#### **Se trata de una API de recetas de cocina que permite insertar nuevas recetas, listar, modificar y eliminar a las usuarias registradas.**
 
 He realizado todos los endpoints que requiere el ejercicio y los he probado con POSTMAN para verficar su funcionamiento.
 
-Además, como complemento, he incorporado un proceso de autenticación de usuario, de manera que si el usuario está logueado, le devuelve el listado de recetas
-que tiene asociado y le permite llevar a cabo las opciones descritas, en caso contrario, no le da acceso a las recetas. Para ello, he creado una nueva instancia en
-la BD para almacenar usuarios. 
+Además, como complemento, he incorporado un proceso de autenticación de usuario, de manera que si el usuario está logueado, le devuelve el listado de recetas que tiene asociado y le permite llevar a cabo las opciones descritas, en caso contrario, no le da acceso a las recetas. Para ello, he creado una nueva instancia en la BD para almacenar usuarios. 
 
 He desarrollado y maquetado un frontend que conserva las funcionalidades de listar recetas, añadir nueva receta y ver en detalle una receta selecionada, así como las funcionalidades de registro de nuevos usuarios y login. 
 
