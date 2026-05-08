@@ -1,5 +1,7 @@
+const API_URL = "https://recetas-four-for-love.onrender.com/";
+
 export const getRecipes = () => {
-    return fetch("http://localhost:3000/recipes", {
+    return fetch(`${API_URL}recipes`, {
         headers: {
             Authorization: localStorage.getItem("token"),
         },
@@ -18,7 +20,7 @@ export const getRecipes = () => {
 };
 
 export const getRecipe = (id) => {
-    return fetch(`http://localhost:3000/recipe/${id}`, {
+    return fetch(`${API_URL}recipe/${id}`, {
         headers: {
             Authorization: localStorage.getItem("token"),
         },
@@ -39,7 +41,7 @@ export const getRecipe = (id) => {
 };
 
 export const login = ({ user_name, password }) => {
-    return fetch("http://localhost:3000/login", {
+    return fetch(`${API_URL}login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -49,7 +51,7 @@ export const login = ({ user_name, password }) => {
 };
 
 export const signup = ({ user_name, email, password }) => {
-    return fetch("http://localhost:3000/signup", {
+    return fetch(`${API_URL}signup`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -59,7 +61,7 @@ export const signup = ({ user_name, email, password }) => {
 };
 
 export const addRecipe = ({ name, ingredients, instructions }) => {
-    return fetch("http://localhost:3000/new-recipe", {
+    return fetch(`${API_URL}new-recipe`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
