@@ -18,7 +18,7 @@ require("dotenv").config();
 app.use(express.json({ limit: "25mb" }));
 app.use(cors());
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`App corriendo en modo dev en puerto: ${port}`);
 });
 
 // ENDPOINTS:

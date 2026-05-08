@@ -2,15 +2,19 @@ const mysql = require("mysql2/promise");
 
 const getConnection = async () => {
     const connection = await mysql.createConnection({
-        host: "localhost",
-        database: "recipessapp",
-        user: process.env.USER_WORKBENCH,
-        password: process.env.PASSWORD_WORKBENCH,
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+        port: process.env.DB_PORT,
+        ssl: {
+            rejectUnauthorized: true,
+        },
     });
     await connection.connect();
 
     console.log(
-        `Conexión establecida con la base de datos (identificador=${connection.threadId})`
+        `Conexión establecida con la base de datos (identificador=${connection.threadId})`,
     );
 
     return connection;
