@@ -1,18 +1,22 @@
 import "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Detail = ({ recipe }) => {
     return (
         <>
             <p>{recipe?.name}</p>
             <p>{recipe?.ingredients}</p>
-            <p>{recipe?.instructions}</p>
+            <ul>
+                {recipe?.instructions?.map((step, index) => (
+                    <li key={index}>{step}</li>
+                ))}
+            </ul>
         </>
-    )
-}
+    );
+};
 
 export default Detail;
 
 Detail.propTypes = {
-    recipe: PropTypes.object.isRequired
-}
+    recipe: PropTypes.object.isRequired,
+};
